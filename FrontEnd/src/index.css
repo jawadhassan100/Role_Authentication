@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Light mode styles */
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #1a202c; /* Dark gray */
+  color: white;
+}
+
+input, textarea, select {
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for inputs */
+}
+
+.light-mode input, .light-mode textarea, .light-mode select {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode input, .dark-mode textarea, .dark-mode select {
+  background-color: #2d3748; /* Darker gray for inputs */
+  color: white;
+}
+
+.light-mode form {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode form {
+  background-color: #2d3748; /* Darker gray for inputs */
+  color: white;
+}
