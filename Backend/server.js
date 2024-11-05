@@ -16,6 +16,11 @@ app.use(cors({
 }));
 app.use(express.json());
 
+// Simple route to check if backend is working
+app.get('/hello', (req, res) => {
+  res.send('Hello World! The backend is running.');
+});
+
 app.use('/api/auth', authRoutes);
 
 const PORT = process.env.PORT || 5000;
