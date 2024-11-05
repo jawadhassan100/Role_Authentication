@@ -2,6 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector  } from 'react-redux';
 import { logout } from '../../redux/authSlice';
 import { toggleTheme } from '../../redux/themeSlice';
+import ButtonToggle from '../ButtonToggle/BUttonToggle';
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -30,9 +31,7 @@ const Navbar = () => {
         ) : (
           <button onClick={handleLogout} className="bg-red-500 text-white px-4 py-2 rounded">Logout</button>
         )}
-         <button onClick={handleThemeToggle} className="bg-gray-300 px-4 py-2 rounded">
-          {isDarkMode ? 'Light Mode' : 'Dark Mode'}
-        </button>
+        <ButtonToggle onClick={handleThemeToggle} isDarkMode={isDarkMode} />
       </div>
     </nav>
   );
