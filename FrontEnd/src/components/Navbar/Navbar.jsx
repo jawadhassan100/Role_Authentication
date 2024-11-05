@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector  } from 'react-redux';
 import { logout } from '../../redux/authSlice';
 import { toggleTheme } from '../../redux/themeSlice';
-import ButtonToggle from '../ButtonToggle/BUttonToggle';
+import ButtonToggle from '../ButtonToggle/ButtonToggle';
 
 const Navbar = () => {
   const dispatch = useDispatch();
