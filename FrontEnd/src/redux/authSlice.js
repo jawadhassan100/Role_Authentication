@@ -5,14 +5,14 @@ const BASE_URL = config.BASE_URL;
 
 // Async actions for login and register
 export const loginUser = createAsyncThunk('auth/login', async (userData) => {
-  const response = await axios.post(`${BASE_URL}/api/auth/login`, userData,{
+  const response = await axios.post(`${BASE_URL}/auth/login`, userData,{
     withCredentials: true,
   });
   return response.data;
 });
 
 export const registerUser = createAsyncThunk('auth/register', async (userData) => {
-  const response = await axios.post(`${BASE_URL}/api/auth/register`, userData);
+  const response = await axios.post(`${BASE_URL}/auth/register`, userData);
   return response.data;
 });
 

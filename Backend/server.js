@@ -1,19 +1,21 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 
-dotenv.config();
-connectDB();
-
 const app = express();
 
 app.use(cors({
-  credentials:true ,
-  origin:"https://role-authentication-k82t.vercel.app/"
+  origin:"https://role-authentication-k82t.vercel.app",
+  credentials:true 
 }));
+
+dotenv.config();
+connectDB();
+
+
+
 app.use(express.json());
 
 // Simple route to check if backend is working
