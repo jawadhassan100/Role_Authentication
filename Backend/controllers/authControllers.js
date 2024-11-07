@@ -38,6 +38,7 @@ const login = async (req, res) => {
     const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, {
       expiresIn: '24h',
     });
+    console.log(process.env.JWT_SECRET);
 
     res.cookie("token", token, {
       httpOnly: true,
@@ -48,7 +49,7 @@ const login = async (req, res) => {
 
     res.json({ token, user: { id: user._id, email: user.email, role: user.role } });
   } catch (error) {
-    ('Error during login:', error.message, error.stack)
+    console.log("error" ,error)
     res.status(500).json({ message: 'Server error' });
   }
 };

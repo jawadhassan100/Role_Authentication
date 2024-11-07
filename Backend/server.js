@@ -7,7 +7,7 @@ const authRoutes = require('./routes/authRoutes');
 const app = express();
 
 app.use(cors({
-  origin:"https://role-authentication-k82t.vercel.app",
+  origin: ["http://localhost:5173", "https://role-authentication-k82t.vercel.app"],
   credentials:true 
 }));
 
