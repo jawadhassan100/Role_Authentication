@@ -12,7 +12,7 @@ const app = express();
 
 app.use(cors({
   credentials:true ,
-  origin:"https://role-authentication-k82t.vercel.app"
+  origin: '*',
 }));
 app.use(express.json());
 
