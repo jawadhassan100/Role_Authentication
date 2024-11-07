@@ -12,9 +12,7 @@ const app = express();
 
 app.use(cors({
   credentials:true ,
-  origin:"https://role-authentication-k82t.vercel.app",
-  allowedHeaders: ["Content-Type", "Authorization"],
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  origin:"https://role-authentication-k82t.vercel.app"
 }));
 app.use(express.json());
 
