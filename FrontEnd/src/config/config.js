@@ -1,4 +1,4 @@
 const config = {
-  BASE_URL : "https://role-authentication.vercel.app/api"
+  BASE_URL : "http://localhost:5555/api"
   };
   export default config;
